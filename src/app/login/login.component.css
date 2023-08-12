@@ -46,6 +46,14 @@
     letter-spacing: 4px;
 }
 
+.form-box h2:hover{
+    font-size: 2em;
+    color: black;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
 .input-box{
     position: relative;
     width: 100%;

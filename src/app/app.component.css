@@ -1,4 +1,3 @@
-
 body{
     display: flex;
     justify-content: center;
@@ -7,4 +6,12 @@ body{
     background: url("src/assets/background.jpg") no-repeat;
     background-size: cover; 
     background-position: center;
+}
+
+h2{
+    color: #fff;
+}
+
+h2:hover{
+    color: black;
 }

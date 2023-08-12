@@ -24,6 +24,7 @@
     justify-content: center;
 }
 
+
 .wrapper-second .icon-close{
     position: absolute;
     top: 0;
@@ -44,6 +45,14 @@
 .form-box-second h2{
     font-size: 3em;
     color: #fff;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.form-box-second h2:hover{
+    font-size: 3em;
+    color: black;
     text-align: center;
     font-weight: 800;
     letter-spacing: 4px;
