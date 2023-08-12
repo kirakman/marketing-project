@@ -1,0 +1,93 @@
+/* css do sobre nós */
+
+.wrapper-second{
+    position: absolute;
+    width: 1000px;
+    height: 600px;
+    max-width: 1400px;
+    max-height: 800px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 50px;
+    overflow: auto;
+    left: 23%;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-second .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box-second h2{
+    font-size: 3em;
+    color: #fff;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.wrapper .form-box-second{
+    width: 100%;
+    padding: 40px;
+}
+
+                                                                                /* estilizando o scroll */
+
+.wrapper-second::-webkit-scrollbar {
+    width: 10px;
+}
+
+.wrapper-second::-webkit-scrollbar-track {
+    background-color: #fff; 
+}
+
+.wrapper-second::-webkit-scrollbar-thumb {
+    background-color: #162938; 
+    border-radius: 5px; 
+}
+
+.wrapper-second::-webkit-scrollbar-thumb:hover {
+    background-color: #162938;
+}
+
+                                                                                /* ESTILIZANDO O FORM BOX DE SOBRE NÓS */
+
+.form-box-second p{
+    padding-top: 25px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.media{
+    display: flex;
+    gap: 100px;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}

@@ -1,4 +1,5 @@
 import { Component, NgModule } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-us',
@@ -7,5 +8,11 @@ import { Component, NgModule } from '@angular/core';
 })
 
 export class AboutUsComponent {
+
+  constructor(private router: Router){}
+
+  navigateToDashboard(){
+    this.router.navigate(['dashboard']);
+  }
 
 }

@@ -21,4 +21,8 @@ constructor(private router: Router){}
   navigateToLogin(){
     this.router.navigate(['login']);
   }
+
+  navigateToContact(){
+    this.router.navigate(['contact']);
+  }
 }
