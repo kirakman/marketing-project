@@ -17,4 +17,8 @@ constructor(private router: Router){}
   navigateToDashboard(){
     this.router.navigate(['dashboard']);
   }
+
+  navigateToLogin(){
+    this.router.navigate(['login']);
+  }
 }

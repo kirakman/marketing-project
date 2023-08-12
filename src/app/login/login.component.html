@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div class="wrapper">
+    <span class="icon-close" (click)="navigateToDashboard()"><span class="material-symbols-outlined">close</span></span>
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><span class="material-symbols-outlined">mail</span></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><span class="material-symbols-outlined">lock</span></span>
+                <input type="password" required>
+                <label>Senha</label>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-info">
+                <p><span class="material-symbols-outlined">
+                    info
+                    </span>Login autorizado apenas para ADM</p>
+            </div>
+        </form>
+    </div>
+</div>
+
