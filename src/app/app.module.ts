@@ -9,6 +9,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +19,13 @@ import { ContactComponent } from './contact/contact.component';
     DashboardComponent,
     AboutUsComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

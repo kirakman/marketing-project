@@ -1,13 +1,20 @@
 header{
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 25px;
+    left: 5%;
+    height: 10%;
+    width: 90%;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .55);
+    background: #37373f;
+    border-radius: 150px;
+    /* backdrop-filter: blur(20px); */
+    /* width: 1600px;
+    justify-content: center; */
 }
 
 .logo{

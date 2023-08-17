@@ -1,9 +1,11 @@
-body{
+.all-content{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("src/assets/background.jpg") no-repeat;
     background-size: cover; 
     background-position: center;
+    /* background-color: #565564; */
+    background-image: url('/assets/cubes-1920x1080.png');
+    /* background-blend-mode: overlay; */
 }

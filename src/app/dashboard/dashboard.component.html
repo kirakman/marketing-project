@@ -1,1 +1,19 @@
-<h1>TESTE!</h1>
+
+<div class="flex-container">
+<div class="wrapper" *ngFor="let card of cardsInfo">
+<div class="card">
+    <div class="inside-img">
+      <img [src]="card.img" class="card-img-top" alt="Fissure in Sandstone"/>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ card.title }}</h5>
+      <p class="card-text">{{ card.subtitle }}</p>
+      <div class="media">
+        <a href="https://www.instagram.com/uniceplac_oficial/" target="_blank"><img src="assets/87390.png" alt="Instagram"></a>
+        <a href="https://www.uniceplac.edu.br/" target="_blank"><img src="assets/horizontal-black-PhotoRoom.png-PhotoRoom.png" alt="Site Oficial Uniceplac"></a>
+        <a href="https://api.whatsapp.com/send?phone=556130353932" target="_blank"><img src="assets/1384023.png" alt="Whatsapp"></a>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
