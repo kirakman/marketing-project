@@ -1,3 +1,5 @@
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 .all-content{
     display: flex;
     justify-content: center;
@@ -5,7 +7,10 @@
     min-height: 100vh;
     background-size: cover; 
     background-position: center;
-    /* background-color: #565564; */
-    background-image: url('/assets/cubes-1920x1080.png');
-    /* background-blend-mode: overlay; */
+    background-image: url('/assets/stardust-1920x1080.png');
+    background-blend-mode: overlay;
+}
+
+h1, p{
+    font-family: 'Space Mono', monospace;
 }

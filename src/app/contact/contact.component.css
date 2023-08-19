@@ -6,9 +6,9 @@
     max-width: 1400px;
     max-height: 800px;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, .5);
+    border: 2px solid rgba(145,0,255,0.3);
     border-radius: 20px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@
 
 .form-box-second h2{
     font-size: 3em;
-    color: #fff;
+   color: rgba(145,0,255,1);
     text-align: center;
     font-weight: 800;
     letter-spacing: 8px;
@@ -52,7 +52,7 @@
 
 .form-box-second h2:hover{
     font-size: 3em;
-    color: #162938;
+    color: rgba(145,0,255,0.7);
     text-align: center;
     font-weight: 800;
     letter-spacing: 4px;
@@ -100,4 +100,24 @@
 img{
     width: 150px;
     height: 150px;
+    color: #fff;
 }
+
+.media img{
+    color: #fff;
+}
+
+.media {
+    display: flex;
+}
+
+.media a {
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.media a:hover {
+    transform: rotateY(180deg);
+}
+

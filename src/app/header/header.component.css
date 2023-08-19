@@ -10,11 +10,9 @@ header{
     align-items: center;
     z-index: 99;
     box-shadow: 0 0 30px rgba(0, 0, 0, .55);
-    background: #37373f;
+    background: transparent;
     border-radius: 150px;
-    /* backdrop-filter: blur(20px); */
-    /* width: 1600px;
-    justify-content: center; */
+    background: rgba(145, 0, 255, 0.6);
 }
 
 .logo{
