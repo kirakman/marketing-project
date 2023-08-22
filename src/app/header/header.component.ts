@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
+adm = true;
+
 constructor(private router: Router){}
 
   navigateToAboutUs() {
