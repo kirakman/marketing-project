@@ -27,4 +27,8 @@ constructor(private router: Router){}
   navigateToContact(){
     this.router.navigate(['contact']);
   }
+
+  navigateToRegisterEvent(){
+    this.router.navigate(['register-event']);
+  }
 }

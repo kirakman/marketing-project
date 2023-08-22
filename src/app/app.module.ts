@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
+import { RegisterEventComponent } from './register-event/register-event.component';
 
 
 
@@ -20,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
     AboutUsComponent,
     LoginComponent,
     ContactComponent,
+    RegisterEventComponent,
     
   ],
   imports: [
