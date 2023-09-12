@@ -68,25 +68,25 @@
 }
 
 .media img{
-    width: 25px;
-    height: 25px;
-    background: #fff;
+    width: 35px;
+    height: 35px;
+    background: none;
     padding: 4px;
-    border-radius: 5px;
+    border-bottom: white;
 }
-/* 
+/*
 TEENTATIVA DE FLEX */
 
 .flex-container {
     display: flex;
-    justify-content: space-between; 
-    flex-wrap: wrap; 
+    justify-content: space-between;
+    flex-wrap: wrap;
     max-width: 1800px;
     padding-top: 200px;
 }
-  
+
 .wrapper {
-    flex-basis: calc(33.33% - 20px); 
+    flex-basis: calc(33.33% - 20px);
     margin: 10px;
 }
-  
+
