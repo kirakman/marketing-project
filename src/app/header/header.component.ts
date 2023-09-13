@@ -31,4 +31,8 @@ constructor(private router: Router){}
   navigateToRegisterEvent(){
     this.router.navigate(['register-event']);
   }
+
+  navigateToRegister(){
+    this.router.navigate(['register']);
+  }
 }

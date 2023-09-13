@@ -9,6 +9,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { RegisterEventComponent } from './register-event/register-event.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -22,12 +23,12 @@ import { RegisterEventComponent } from './register-event/register-event.componen
     LoginComponent,
     ContactComponent,
     RegisterEventComponent,
-    
-  ],
+    RegisterComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,10 +17,11 @@ header{
 
 .logo{
    width: 200px;
-   height: 100px;  
+   height: 100px;
 }
 
-.navegacao a{
+.navegacao a,
+.navegacao span{
     position: relative;
     font-size: 1.1em;
     color: #fff;
@@ -74,10 +75,10 @@ img{
 }
 
 .button-89 {
-    --b: 3px;  
-    --s: .45em; 
+    --b: 3px;
+    --s: .45em;
     --color: #fff;
-    
+
     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
     color: var(--color);
     --_p: var(--s);
@@ -88,21 +89,21 @@ img{
     outline: var(--b) solid #0000;
     outline-offset: .6em;
     font-size: 16px;
-  
+
     border: 0;
-  
+
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
   }
-  
+
   .button-89:hover,
   .button-89:focus-visible{
     --_p: 0px;
     outline-color: var(--color);
     outline-offset: .05em;
   }
-  
+
   .button-89:active {
     background: var(--color);
     color: #fff;
