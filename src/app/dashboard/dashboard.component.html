@@ -1,9 +1,7 @@
 <div class="flex-container">
 <div class="wrapper" *ngFor="let card of cardsInfo">
 <div class="card">
-    <div class="inside-img">
-      <img [src]="card.img" class="card-img-top" alt="Fissure in Sandstone"/>
-    </div>
+    <div><img [src]="card.img"></div>
     <div class="card-body">
       <h5 class="card-title">{{ card.title }}</h5>
       <p class="card-text">{{ card.subtitle }}</p>

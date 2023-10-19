@@ -7,7 +7,7 @@
     max-width: 1400px;
     max-height: 800px;
     background: transparent;
-    border: 2px solid rgba(145,0,255,0.3);
+    border: 2px solid rgb(14, 150, 9);
     border-radius: 20px;
     backdrop-filter: blur(2px);
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
@@ -45,7 +45,7 @@
 
 .form-box-second h2{
     font-size: 3em;
-    color: rgba(145,0,255,1);
+    color: rgb(14, 150, 9);
     text-align: center;
     font-weight: 800;
     letter-spacing: 8px;
@@ -54,7 +54,7 @@
 
 .form-box-second h2:hover{
     font-size: 3em;
-    color: rgba(145,0,255,0.7);
+    color: rgb(14, 150, 9);
     text-align: center;
     font-weight: 800;
     letter-spacing: 4px;
@@ -73,12 +73,12 @@
 }
 
 .wrapper-second::-webkit-scrollbar-track {
-    background-color: #fff; 
+    background-color: #fff;
 }
 
 .wrapper-second::-webkit-scrollbar-thumb {
-    background-color: #162938; 
-    border-radius: 5px; 
+    background-color: #162938;
+    border-radius: 5px;
 }
 
 .wrapper-second::-webkit-scrollbar-thumb:hover {
@@ -127,7 +127,7 @@
     bottom: 5px;
     width: 40%;
     height: 3px;
-    background: rgba(145,0,255,1); ;
+    background: rgb(14, 150, 9);
     border-radius: 5px;
     transform-origin: right;
     transform: scaleX(0);

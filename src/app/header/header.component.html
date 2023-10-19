@@ -1,7 +1,7 @@
 <header>
     <span (click)="navigateToDashboard()"><img src="assets/Horizontal-Colorida.png" alt="logo-uniceplac" class="logo"></span>
     <nav class="navegacao">
-        <button class="button-89" role="button" *ngIf="adm" (click)="navigateToRegisterEvent()">Cadastrar Evento</button>
+        <a *ngIf="adm" (click)="navigateToRegisterEvent()">Cadastrar Evento</a>
         <a (click)="navigateToDashboard()">Eventos</a>
         <a (click)="navigateToAboutUs()">Sobre nós</a>
         <a (click)="navigateToContact()">Contato</a>
