@@ -13,13 +13,20 @@ cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
 cardsVar: CardsInfoData = {
   img: '',
   title: '',
-  subtitle: ''
+  subtitle: '',
+  url: '',
 };
 
 isFavorite: boolean = false;
 
 toggleFavoriteColor() {
   this.isFavorite = !this.isFavorite;
+}
+
+shareUrl(url: string) {
+  if (url) {
+    window.open(url, '_blank');
+  }
 }
 
 constructor(){}

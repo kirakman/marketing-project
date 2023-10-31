@@ -7,7 +7,7 @@
       <p class="card-text">{{ card.subtitle }}</p>
       <div class="media">
         <span class="material-symbols-outlined" [ngClass]="{'red': isFavorite}" (click)="toggleFavoriteColor()">favorite</span>
-        <span class="material-symbols-outlined">share</span>
+        <button (click)="shareUrl(card.url)"><span class="material-symbols-outlined">share</span></button>
         <span class="material-symbols-outlined">comment</span>
         <span class="material-symbols-outlined">edit</span>
         <span class="material-symbols-outlined">delete_forever</span>
