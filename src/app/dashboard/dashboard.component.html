@@ -1,36 +1,18 @@
 <div class="flex-container">
 <div class="wrapper" *ngFor="let card of cardsInfo">
 <div class="card">
-    <div><img [src]="card.img"></div>
+    <img [src]="card.img">
     <div class="card-body">
       <h5 class="card-title">{{ card.title }}</h5>
       <p class="card-text">{{ card.subtitle }}</p>
       <div class="media">
-        <a href="" target="_blank"><img src="/assets/heart.svg" alt="Instagram"></a>
-        <a href="" target="_blank"><img src="/assets/arrow-redo.svg" alt="Site Oficial Uniceplac"></a>
-        <a href="" target="_blank"><img src="/assets/chatbox-ellipses.svg" alt="Whatsapp"></a>
-        <a href="" target="_blank"><img src="/assets/ellipsis-vertical.svg" alt="Open Options"></a>
+        <span class="material-symbols-outlined">favorite</span>
+        <span class="material-symbols-outlined">share</span>
+        <span class="material-symbols-outlined">comment</span>
+        <span class="material-symbols-outlined">edit</span>
+        <span class="material-symbols-outlined">delete_forever</span>
     </div>
     </div>
   </div>
 </div>
 </div>
-
-<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-  <mat-icon>more_vert</mat-icon>
-</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>dialpad</mat-icon>
-    <span>Redial</span>
-  </button>
-  <button mat-menu-item disabled>
-    <mat-icon>voicemail</mat-icon>
-    <span>Check voice mail</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>notifications_off</mat-icon>
-    <span>Disable alerts</span>
-  </button>
-</mat-menu>
-
