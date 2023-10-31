@@ -16,9 +16,15 @@ cardsVar: CardsInfoData = {
   subtitle: ''
 };
 
+isFavorite: boolean = false;
+
+toggleFavoriteColor() {
+  this.isFavorite = !this.isFavorite;
+}
+
 constructor(){}
 
 ngOnInit(): void {
-    
+
 }
 }

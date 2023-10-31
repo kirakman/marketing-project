@@ -23,6 +23,13 @@
     bottom: 40px;
 }
 
+/* .material-symbols-outlined:first-child:hover {
+    color: red;
+} */
+
+.red {
+  color: red;
+}
 
 .wrapper{
     width: 500px;
@@ -59,6 +66,7 @@
 .media{
     display: flex;
     gap: 25px;
+    cursor: pointer;
 }
 
 .media span{
@@ -66,6 +74,11 @@
     height: 35px;
     padding: 4px;
     border-bottom: white;
+}
+
+.media button{
+ border: none;
+ background-color: transparent;
 }
 
 /*

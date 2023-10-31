@@ -51,4 +51,3 @@ export const MOCK_CARDS_INFO: CardsInfoData[] = [
       subtitle: 'Subtitle for Card 3',
     },
   ];
-  
