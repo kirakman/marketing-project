@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit{
 
 cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
 
-listEvents: Observable<CardsInfoData[]>;
+listEvents$: Observable<CardsInfoData[]>;
 
 cardsVar: CardsInfoData = {
   img: '',
@@ -34,7 +34,7 @@ shareUrl(url: string) {
 }
 
 constructor(private marketingService: MarketingServiceService){
-  this.listEvents = this.marketingService.listAllEvents();
+  this.listEvents$ = this.marketingService.listAllEvents();
 }
 
 ngOnInit(): void {

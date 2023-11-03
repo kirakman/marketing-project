@@ -93,3 +93,9 @@ TEENTATIVA DE FLEX */
     margin: 10px;
 }
 
+mat-spinner {
+  display: flex;
+  position: absolute;
+  top: 20%;
+  color: #162938;
+}
