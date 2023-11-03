@@ -1,14 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CardsInfoData, MOCK_CARDS_INFO } from '../Model/cards-model';
+import { CardsInfoData } from '../Model/cards-model';
+import { tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MarketingServiceService {
 
-cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
 
-constructor(httpClient: HttpClient) { }
 
+  private readonly API = 'src/assets/events.json';
+
+  constructor(private httpClient: HttpClient) { }
+
+  listAllEvents() {
+    return this.httpClient.get<CardsInfoData[]>(this.API).pipe(
+      tap(eventos => console.log())
+    );
+  }
 }

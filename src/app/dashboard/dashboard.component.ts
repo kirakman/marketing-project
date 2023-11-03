@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardsInfoData, MOCK_CARDS_INFO } from '../Model/cards-model';
+import { MarketingServiceService } from '../service/marketing-service.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,6 +11,8 @@ import { CardsInfoData, MOCK_CARDS_INFO } from '../Model/cards-model';
 export class DashboardComponent implements OnInit{
 
 cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
+
+listEvents: Observable<CardsInfoData[]>;
 
 cardsVar: CardsInfoData = {
   img: '',
@@ -29,7 +33,9 @@ shareUrl(url: string) {
   }
 }
 
-constructor(){}
+constructor(private marketingService: MarketingServiceService){
+  this.listEvents = this.marketingService.listAllEvents();
+}
 
 ngOnInit(): void {
 
