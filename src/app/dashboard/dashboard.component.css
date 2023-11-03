@@ -99,3 +99,10 @@ mat-spinner{
   top: 20%;
   color: #162938;
 }
+
+.media span:hover{
+  background-color: rgb(240, 238, 238);
+  padding: 6px;
+  border-radius: 10px;
+  transition: .3s;
+}
