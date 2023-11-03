@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardsInfoData, MOCK_CARDS_INFO } from '../Model/cards-model';
 import { MarketingServiceService } from '../service/marketing-service.service';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -34,7 +34,9 @@ shareUrl(url: string) {
 }
 
 constructor(private marketingService: MarketingServiceService){
-  this.listEvents$ = this.marketingService.listAllEvents();
+  this.listEvents$ = this.marketingService.listAllEvents().pipe(catchError(error =>{
+    return of ([])
+  }));
 }
 
 ngOnInit(): void {
