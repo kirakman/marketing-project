@@ -17,7 +17,7 @@ export class MarketingServiceService {
   listAllEvents() {
     return this.httpClient.get<CardsInfoData[]>(this.API).pipe(
       first(),
-      delay(5000),
+      delay(800),
       tap(eventos => console.log())
     );
   }

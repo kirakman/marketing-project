@@ -1,22 +1,32 @@
-<div class="flex-container" *ngIf="listEvents$ | async as eventos; else loading">
+<div
+  class="flex-container"
+  *ngIf="listEvents$ | async as eventos; else loading"
+>
   <div class="wrapper" *ngFor="let card of cardsInfo">
-<div class="card">
-    <img [src]="card.img">
-    <div class="card-body">
-      <h5 class="card-title">{{ card.title }}</h5>
-      <p class="card-text">{{ card.subtitle }}</p>
-      <div class="media">
-        <span class="material-symbols-outlined" [ngClass]="{'red': isFavorite}" (click)="toggleFavoriteColor()">favorite</span>
-        <button (click)="shareUrl(card.url)"><span class="material-symbols-outlined">share</span></button>
-        <span class="material-symbols-outlined">comment</span>
-        <span class="material-symbols-outlined">edit</span>
-        <span class="material-symbols-outlined">delete_forever</span>
+    <div class="card">
+      <img [src]="card.img" />
+      <div class="card-body">
+        <h5 class="card-title">{{ card.title }}</h5>
+        <p class="card-text">{{ card.subtitle }}</p>
+        <div class="media">
+          <span
+            class="material-symbols-outlined"
+            [ngClass]="{ red: isFavorite }"
+            (click)="toggleFavoriteColor()"
+            >favorite</span
+          >
+          <button (click)="shareUrl(card.url)">
+            <span class="material-symbols-outlined">share</span>
+          </button>
+          <span class="material-symbols-outlined">comment</span>
+          <span class="material-symbols-outlined">edit</span>
+          <span class="material-symbols-outlined">delete_forever</span>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
 
-      <ng-template #loading>
-        <mat-spinner></mat-spinner>
-      </ng-template>
+<ng-template #loading class="loading-spinner">
+  <mat-spinner></mat-spinner>
+</ng-template>
