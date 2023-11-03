@@ -4,6 +4,7 @@ import { MarketingServiceService } from '../service/marketing-service.service';
 import { Observable, catchError, of } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { ErrorDialogComponent } from '../shared/components/error-dialog/error-dialog.component';
+import { ExcludeDialogComponent } from '../shared/components/exclude-dialog/exclude-dialog.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -48,6 +49,14 @@ onError(errorMsg: string){
     this.dialog.open(ErrorDialogComponent, {
       data: errorMsg
     });
+}
+
+openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+  this.dialog.open(ExcludeDialogComponent, {
+    width: '250px',
+    enterAnimationDuration,
+    exitAnimationDuration,
+  });
 }
 
 ngOnInit(): void {}
