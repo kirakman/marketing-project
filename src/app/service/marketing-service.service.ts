@@ -10,7 +10,9 @@ export class MarketingServiceService {
 
 
 
-  private readonly API = './assets/events.json';
+  // private readonly API = '../Model/cards-model.ts';
+
+  private readonly API = 'assets/events.json';
 
   constructor(private httpClient: HttpClient) { }
 

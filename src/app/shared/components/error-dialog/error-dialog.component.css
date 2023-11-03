@@ -1,0 +1,15 @@
+button{
+  display: flex;
+  background-color: red;
+  color: black;
+}
+
+.title{
+  color: red;
+  font-weight: 600;
+}
+
+.subtitle{
+  color: black;
+  font-weight: 400;
+}
