@@ -5,6 +5,7 @@ import { Observable, catchError, of } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { ErrorDialogComponent } from '../shared/components/error-dialog/error-dialog.component';
 import { ExcludeDialogComponent } from '../shared/components/exclude-dialog/exclude-dialog.component';
+import { EditModuleComponent } from '../shared/components/edit-module/edit-module.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -36,10 +37,9 @@ shareUrl(url: string) {
   }
 }
 
-constructor(private marketingService: MarketingServiceService,
-            public dialog: MatDialog){
+constructor(private marketingService: MarketingServiceService, public dialog: MatDialog) {
 
-  this.listEvents$ = this.marketingService.listAllEvents().pipe(catchError(error => {
+this.listEvents$ = this.marketingService.listAllEvents().pipe(catchError(error => {
     this.onError('Erro ao carregar Eventos.');
     return of ([])}
   ));
@@ -48,14 +48,21 @@ constructor(private marketingService: MarketingServiceService,
 onError(errorMsg: string){
     this.dialog.open(ErrorDialogComponent, {
       data: errorMsg
-    });
+  });
 }
 
-openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+openDialogExclude(enterAnimationDuration: string, exitAnimationDuration: string): void {
   this.dialog.open(ExcludeDialogComponent, {
     width: '250px',
     enterAnimationDuration,
     exitAnimationDuration,
+  });
+}
+
+openDialogEdit() {
+  const dialogRef = this.dialog.open(EditModuleComponent);
+  dialogRef.afterClosed().subscribe(result => {
+    console.log(`Dialog result: ${result}`);
   });
 }
 

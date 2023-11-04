@@ -10,15 +10,14 @@ import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { RegisterEventComponent } from './register-event/register-event.component';
 import { RegisterComponent } from './register/register.component';
-import {MatMenuModule} from '@angular/material/menu';
+import {MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule} from '@angular/material/dialog';
 import { SharedModule } from './shared/shared.module';
-
 
 
 @NgModule({
@@ -30,7 +29,8 @@ import { SharedModule } from './shared/shared.module';
     LoginComponent,
     ContactComponent,
     RegisterEventComponent,
-    RegisterComponent
+    RegisterComponent,
+
    ],
   imports: [
     BrowserModule,

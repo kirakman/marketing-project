@@ -19,8 +19,8 @@
             <span class="material-symbols-outlined">share</span>
           </button>
           <span class="material-symbols-outlined">comment</span>
-          <span class="material-symbols-outlined">edit</span>
-          <span class="material-symbols-outlined" (click)="openDialog('0ms', '0ms')">delete_forever</span>
+          <button (click)="openDialogEdit()" class="edit-button"><span class="material-symbols-outlined">edit</span></button>
+          <span class="material-symbols-outlined" (click)="openDialogExclude('0ms', '0ms')">delete_forever</span>
         </div>
       </div>
     </div>

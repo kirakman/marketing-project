@@ -106,3 +106,8 @@ mat-spinner{
   border-radius: 10px;
   transition: .3s;
 }
+
+.edit-button{
+  background: white;
+  background-color: white;
+}
