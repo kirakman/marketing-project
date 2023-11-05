@@ -3,6 +3,11 @@
   background-color: red;
 }
 
+.yes-button:hover{
+  color: white;
+  background-color: red;
+}
+
 .title{
   color: black;
   font-weight: 600;
