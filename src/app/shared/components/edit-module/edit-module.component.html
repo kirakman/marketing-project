@@ -1,15 +1,13 @@
-<h1 mat-dialog-title>Favorite Animal</h1>
-<div mat-dialog-content *ngFor="let card of cardsInfo" class="edit-button">
-  My favorite animal is:
-  <ul>
-    <li>
-      {{ card.title }}
-    </li>
-    <li>
-      {{ card.subtitle }}
-    </li>
-    <li>
-      Teste
-    </li>
-  </ul>
+<div mat-dialog-content class="edit-button">
+  <span class="icon-close" (click)="closeDialog()"><span class="material-symbols-outlined">close</span></span>
+ <div class="title">
+  <h1>Editar Evento</h1>
+ </div>
+ <div class="event-info">
+  <input type="text" placeholder="{{card.img}}">
+  <input type="text" placeholder="{{card.title}}">
+  <input type="text" placeholder="{{card.subtitle}}">
+  <input type="text" placeholder="{{card.url}}">
+  <button type="submit" class="btn">Confirmar</button>
+</div>
 </div>

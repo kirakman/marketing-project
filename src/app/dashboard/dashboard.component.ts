@@ -59,12 +59,18 @@ openDialogExclude(enterAnimationDuration: string, exitAnimationDuration: string)
   });
 }
 
-openDialogEdit() {
-  const dialogRef = this.dialog.open(EditModuleComponent);
+openDialogEdit(card: CardsInfoData) {
+  const dialogRef = this.dialog.open(EditModuleComponent, {
+    data: { card }, // Pass the card as data to the dialog
+  });
+
   dialogRef.afterClosed().subscribe(result => {
     console.log(`Dialog result: ${result}`);
   });
 }
 
-ngOnInit(): void {}
+
+
+ngOnInit(): void {
+}
 }

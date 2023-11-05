@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatDialog, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { Inject} from '@angular/core';
 import { MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {NgIf} from '@angular/common';
 import { CardsInfoData, MOCK_CARDS_INFO } from 'src/app/Model/cards-model';
-
 
 
 @Component({
@@ -15,11 +13,17 @@ import { CardsInfoData, MOCK_CARDS_INFO } from 'src/app/Model/cards-model';
 })
 export class EditModuleComponent implements OnInit {
 
- cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
+card: any=  CardsInfoData;
+cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
 
-  constructor(public dialog: MatDialog) { }
+ constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: { card: CardsInfoData }, public dialogRef: MatDialogRef<EditModuleComponent>) {}
+
+ closeDialog(): void {
+  this.dialogRef.close();
+}
 
   ngOnInit() {
+    this.card = this.data.card;
   }
 
 }
