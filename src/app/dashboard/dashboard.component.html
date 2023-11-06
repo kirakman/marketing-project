@@ -9,15 +9,8 @@
         <h5 class="card-title">{{ limitText(card.title, 24) }}</h5>
         <p class="card-text">{{ limitText(card.subtitle, 42) }}</p>
         <div class="media">
-          <span
-            class="material-symbols-outlined"
-            [ngClass]="{ red: isFavorite }"
-            (click)="toggleFavoriteColor()"
-            >favorite</span
-          >
-          <button (click)="shareUrl(card.url)">
-            <span class="material-symbols-outlined">share</span>
-          </button>
+          <span class="material-symbols-outlined" [ngClass]="{ red: card.isFavorite }" (click)="toggleFavoriteColor(card)">favorite</span>
+          <button (click)="shareUrl(card.url)"><span class="material-symbols-outlined">share</span></button>
           <button (click)="commentDialog(card)"><span class="material-symbols-outlined">comment</span></button>
           <button (click)="openDialogEdit(card)" class="edit-button"><span class="material-symbols-outlined">edit</span></button>
           <span class="material-symbols-outlined" (click)="openDialogExclude('0ms', '0ms')">delete_forever</span>

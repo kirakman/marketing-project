@@ -19,17 +19,8 @@ cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
 
 listEvents$: Observable<CardsInfoData[]>;
 
-// cardsVar: CardsInfoData = {
-//   img: '',
-//   title: '',
-//   subtitle: '',
-//   url: '',
-// };
-
-isFavorite: boolean = false;
-
-toggleFavoriteColor() {
-  this.isFavorite = !this.isFavorite;
+toggleFavoriteColor(card: CardsInfoData) {
+  card.isFavorite = !card.isFavorite;
 }
 
 shareUrl(url: string) {
