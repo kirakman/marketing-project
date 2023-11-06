@@ -79,3 +79,24 @@ h3{
   font-weight: 600;
 }
 
+.sides{
+  display: flex;
+}
+
+/* .right-card{
+  display: flex;
+  flex-direction: column;
+} */
+
+.inside-comments div{
+  border: 1px solid #162938;
+  border-radius: 5px;
+  text-align: center;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.unit-comments{
+  gap: 15px;
+}

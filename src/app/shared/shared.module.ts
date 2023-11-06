@@ -7,6 +7,7 @@ import { ExcludeDialogComponent } from './components/exclude-dialog/exclude-dial
 import { EditModuleComponent } from './components/edit-module/edit-module.component';
 import { CommentModuleComponent } from './components/comment-module/comment-module.component';
 import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatCardModule} from '@angular/material/card';
     CommonModule,
     MatDialogModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   exports: [ErrorDialogComponent, EditModuleComponent]
 })
