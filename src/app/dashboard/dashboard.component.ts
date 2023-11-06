@@ -80,6 +80,14 @@ commentDialog(card: CardsInfoData){
   });
 }
 
+limitText(text: string, maxLength: number): string {
+  if (text.length > maxLength) {
+    return text.substring(0, maxLength) + '...'; // Adiciona '...' se o texto for truncado
+  } else {
+    return text;
+  }
+}
+
 ngOnInit(): void {
 }
 }

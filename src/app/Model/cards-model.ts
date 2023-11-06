@@ -9,7 +9,7 @@ export const MOCK_CARDS_INFO: CardsInfoData[] = [
     {
       img: 'https://www.letshotels.com.br/wp-content/uploads/2018/06/Site-1.jpeg',
       title: 'Na Praia',
-      subtitle: 'Subtitle for Card 1',
+      subtitle: 'Subtitle for Card 1Subtitle for Card 1Subtitle for Card 1Subtitle for Card 1Subtitle for Card 1Subtitle for Card 1Subtitle for Card 1',
       url: 'https://r2.com.vc/napraiafestival'
     },
     {
