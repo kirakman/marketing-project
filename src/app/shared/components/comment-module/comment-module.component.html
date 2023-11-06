@@ -1,0 +1,25 @@
+<mat-card class="example-card">
+  <span class="icon-close" (click)="closeDialog()"><span class="material-symbols-outlined">close</span></span>
+  <div class="left-card">
+  <mat-card-header>
+    <h3>Comentários</h3>
+  </mat-card-header>
+  <mat-card-content class="event-name">
+    <div>{{card.title}}</div>
+  </mat-card-content>
+  <mat-card-content>
+    <img src="{{card.img}}" alt="comment-img">
+  </mat-card-content>
+  <div class="comment">
+    <form>
+      <label for="comment">Seu Comentário:</label>
+      <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+      <br><br>
+      <input type="submit" value="Enviar" class="btn">
+  </form>
+  </div>
+</div>
+<div class="right-card">
+
+</div>
+</mat-card>

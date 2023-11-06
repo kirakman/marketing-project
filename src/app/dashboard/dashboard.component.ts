@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ErrorDialogComponent } from '../shared/components/error-dialog/error-dialog.component';
 import { ExcludeDialogComponent } from '../shared/components/exclude-dialog/exclude-dialog.component';
 import { EditModuleComponent } from '../shared/components/edit-module/edit-module.component';
+import { CommentModuleComponent } from '../shared/components/comment-module/comment-module.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -69,7 +70,15 @@ openDialogEdit(card: CardsInfoData) {
   });
 }
 
+commentDialog(card: CardsInfoData){
+  const dialogRef = this.dialog.open(CommentModuleComponent, {
+    data: { card }, // Pass the card as data to the dialog
+  });
 
+  dialogRef.afterClosed().subscribe(result => {
+    console.log(`Dialog result: ${result}`);
+  });
+}
 
 ngOnInit(): void {
 }

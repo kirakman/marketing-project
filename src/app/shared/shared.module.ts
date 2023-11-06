@@ -5,19 +5,22 @@ import {  MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { ExcludeDialogComponent } from './components/exclude-dialog/exclude-dialog.component';
 import { EditModuleComponent } from './components/edit-module/edit-module.component';
-
+import { CommentModuleComponent } from './components/comment-module/comment-module.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
   declarations: [
     ErrorDialogComponent,
     ExcludeDialogComponent,
-    EditModuleComponent
+    EditModuleComponent,
+    CommentModuleComponent
   ],
   imports: [
     CommonModule,
     MatDialogModule,
     MatButtonModule,
+    MatCardModule
   ],
   exports: [ErrorDialogComponent, EditModuleComponent]
 })

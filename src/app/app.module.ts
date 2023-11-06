@@ -30,7 +30,6 @@ import { SharedModule } from './shared/shared.module';
     ContactComponent,
     RegisterEventComponent,
     RegisterComponent,
-
    ],
   imports: [
     BrowserModule,
