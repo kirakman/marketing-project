@@ -20,7 +20,8 @@ export class RegisterEventComponent {
     const evento: EventoModel = {
       nome: this.eventoProp.nome,
       descricao: this.eventoProp.descricao,
-      img: this.eventoProp.img
+      img: this.eventoProp.img,
+      url: this.eventoProp.url
     };
     this.service.postEvento(evento).subscribe((result) => {
       console.log('Evento salvo:', result);

@@ -5,5 +5,6 @@ public nome?:string;
 public descricao?:string;
 public img?:string;
 public url?:string;
+public isFavorite?:boolean;
 
 }
