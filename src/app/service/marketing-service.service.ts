@@ -14,7 +14,7 @@ export class MarketingServiceService {
 
   constructor(private httpClient: HttpClient) { }
 
-  listAllEvents() {
+  listAllEvents(): Observable<CardsInfoData[]> {
     return this.httpClient.get<CardsInfoData[]>(this.API).pipe(
       first(),
       delay(800),
@@ -23,6 +23,10 @@ export class MarketingServiceService {
 
   postEvento(evento: EventoModel): Observable<EventoModel> {
     return this.httpClient.post<EventoModel>(this.API, evento);
+  }
+
+  getEvento(): Observable<CardsInfoData[]> {
+    return this.httpClient.get<CardsInfoData[]>(this.API);
   }
 
 }
