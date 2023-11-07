@@ -8,6 +8,8 @@ import { EditModuleComponent } from './components/edit-module/edit-module.compon
 import { CommentModuleComponent } from './components/comment-module/comment-module.component';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     MatButtonModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports: [ErrorDialogComponent, EditModuleComponent]
 })
