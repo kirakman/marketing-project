@@ -14,10 +14,15 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    padding: 50px;
     overflow: auto;
     left: 13%;
     top: 15%;
+}
+
+label{
+  position: relative;
+  top: 15px;
+  right: 4px;
 }
 
 
