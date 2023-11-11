@@ -3,6 +3,8 @@
   width: 1100px;
   border: 2px solid rgb(14, 150, 9);
   box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex; /* Alteração aqui */
+  overflow: hidden; /* Adição aqui para esconder o overflow */
 }
 
 .icon-close{
@@ -22,16 +24,17 @@
   z-index: 1;
 }
 
-.left-card{
+.left-card {
   height: 100%;
-  width: 50%;
-  max-width: 50%;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
   border-right: 2px solid #162938;
   gap: 15px;
+  overflow: hidden;
 }
 
 .left-card img{
@@ -83,20 +86,21 @@ h3{
   display: flex;
 }
 
-/* .right-card{
-  display: flex;
-  flex-direction: column;
-} */
+/* ... Seu CSS anterior ... */
 
-.inside-comments div{
+.right-card {
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inside-comments {
   border: 1px solid #162938;
-  border-radius: 5px;
   text-align: center;
   gap: 10px;
-  display: flex;
-  flex-direction: column;
+  padding: 10px;
+  max-width: 90%; /* Defina o tamanho máximo desejado */
+  overflow-wrap: break-word; /* Adiciona a quebra de linha quando excede a largura */
 }
 
-.unit-comments{
-  gap: 15px;
-}
