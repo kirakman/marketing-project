@@ -1,24 +1,22 @@
-<div
-  class="flex-container"
-  *ngIf="listEvents$ | async as eventos; else loading"
->
-  <div class="wrapper" *ngFor="let card of cardsInfo">
+<div class="flex-container">
+  <div class="wrapper" *ngFor="let card of eventos">
     <div class="card">
       <img [src]="card.img" alt="imagens-card"/>
       <div class="card-body">
-        <h5 class="card-title">{{ limitText(card.title, 24) }}</h5>
-        <p class="card-text">{{ limitText(card.subtitle, 42) }}</p>
+        <h5 class="card-title">{{ card.nome }}</h5>
+        <p class="card-text">{{ card.descricao }}</p>
         <div class="media">
-          <span class="material-symbols-outlined" [ngClass]="{ red: card.isFavorite }" (click)="toggleFavoriteColor(card)">favorite</span>
-          <button (click)="shareUrl(card.url)"><span class="material-symbols-outlined">share</span></button>
+          <!-- <span class="material-symbols-outlined" [ngClass]="{ red: card.isFavorite }" (click)="toggleFavoriteColor(card)">favorite</span> -->
+          <!-- <button (click)="shareUrl(card.url)"><span class="material-symbols-outlined">share</span></button>
           <button (click)="commentDialog(card)"><span class="material-symbols-outlined">comment</span></button>
-          <button (click)="openDialogEdit(card)" class="edit-button"><span class="material-symbols-outlined">edit</span></button>
+          <button (click)="openDialogEdit(card)" class="edit-button"><span class="material-symbols-outlined">edit</span></button> -->
           <span class="material-symbols-outlined" (click)="openDialogExclude('0ms', '0ms')">delete_forever</span>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <ng-template #loading class="loading-spinner">
   <mat-spinner></mat-spinner>

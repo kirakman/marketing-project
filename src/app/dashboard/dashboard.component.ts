@@ -7,6 +7,7 @@ import { ErrorDialogComponent } from '../shared/components/error-dialog/error-di
 import { ExcludeDialogComponent } from '../shared/components/exclude-dialog/exclude-dialog.component';
 import { EditModuleComponent } from '../shared/components/edit-module/edit-module.component';
 import { CommentModuleComponent } from '../shared/components/comment-module/comment-module.component';
+import { EventoModel } from '../Model/evento-model';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,7 +17,7 @@ import { CommentModuleComponent } from '../shared/components/comment-module/comm
 export class DashboardComponent implements OnInit{
 
 cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
-
+eventos: EventoModel[] = [];
 listEvents$: Observable<CardsInfoData[]>;
 
 toggleFavoriteColor(card: CardsInfoData) {
@@ -80,5 +81,8 @@ limitText(text: string, maxLength: number): string {
 }
 
 ngOnInit(): void {
+  this.marketingService.getEvento().subscribe(data => {
+    this.eventos = data;
+  });
 }
 }

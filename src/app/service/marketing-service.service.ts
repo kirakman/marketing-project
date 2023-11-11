@@ -25,8 +25,9 @@ export class MarketingServiceService {
     return this.httpClient.post<EventoModel>(this.API, evento);
   }
 
-  getEvento(): Observable<CardsInfoData[]> {
-    return this.httpClient.get<CardsInfoData[]>(this.API);
+  getEvento(): Observable<EventoModel[]> {
+    return this.httpClient.get<EventoModel[]>(this.API).pipe(
+    );
   }
 
 }
