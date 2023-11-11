@@ -16,9 +16,7 @@ import { EventoModel } from '../Model/evento-model';
 })
 export class DashboardComponent implements OnInit{
 
-cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
 eventos: EventoModel[] = [];
-listEvents$: Observable<CardsInfoData[]>;
 
 toggleFavoriteColor(card: EventoModel) {
   card.isFavorite = !card.isFavorite;
@@ -30,13 +28,7 @@ shareUrl(url: string) {
   }
 }
 
-constructor(private marketingService: MarketingServiceService, public dialog: MatDialog) {
-
-this.listEvents$ = this.marketingService.listAllEvents().pipe(catchError(error => {
-    this.onError('Erro ao carregar Eventos.');
-    return of ([])}
-  ));
-}
+constructor(private marketingService: MarketingServiceService, public dialog: MatDialog) {}
 
 onError(errorMsg: string){
     this.dialog.open(ErrorDialogComponent, {
@@ -54,7 +46,7 @@ openDialogExclude(enterAnimationDuration: string, exitAnimationDuration: string)
 
 openDialogEdit(card: EventoModel) {
   const dialogRef = this.dialog.open(EditModuleComponent, {
-    data: { card }, // Pass the card as data to the dialog
+    data: { card },
   });
 
   dialogRef.afterClosed().subscribe(result => {
@@ -62,9 +54,9 @@ openDialogEdit(card: EventoModel) {
   });
 }
 
-commentDialog(card: CardsInfoData){
+commentDialog(card: EventoModel){
   const dialogRef = this.dialog.open(CommentModuleComponent, {
-    data: { card }, // Pass the card as data to the dialog
+    data: { card },
   });
 
   dialogRef.afterClosed().subscribe(result => {
@@ -74,7 +66,7 @@ commentDialog(card: CardsInfoData){
 
 limitText(text: string, maxLength: number): string {
   if (text.length > maxLength) {
-    return text.substring(0, maxLength) + '...'; // Adiciona '...' se o texto for truncado
+    return text.substring(0, maxLength) + '...';
   } else {
     return text;
   }
