@@ -52,7 +52,7 @@ openDialogExclude(enterAnimationDuration: string, exitAnimationDuration: string)
   });
 }
 
-openDialogEdit(card: CardsInfoData) {
+openDialogEdit(card: EventoModel) {
   const dialogRef = this.dialog.open(EditModuleComponent, {
     data: { card }, // Pass the card as data to the dialog
   });

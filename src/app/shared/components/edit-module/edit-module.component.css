@@ -1,10 +1,17 @@
 .edit-button{
   background: white;
   background-color: white;
-  width: 800px;
-  height: 400px;
+  width: 1000px;
+  height: 1000px;
   border: 2px solid rgb(14, 150, 9);
   box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+label{
+  font-weight: 400;
+  color: black;
+  position: relative;
+  top: 20px;
 }
 
 .title h1{

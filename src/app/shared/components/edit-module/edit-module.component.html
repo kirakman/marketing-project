@@ -4,10 +4,14 @@
   <h1>Editar Evento</h1>
  </div>
  <div class="event-info">
-  <input type="text" placeholder="{{card.img}}">
-  <input type="text" placeholder="{{card.title}}">
-  <input type="text" placeholder="{{card.subtitle}}">
-  <input type="text" placeholder="{{card.url}}">
+  <label for="img">URL da Imagem do Evento</label>
+  <input type="text" placeholder="{{card.img}}" name="img" id="img">
+  <label for="name">Nome do Evento</label>
+  <input type="text" placeholder="{{card.nome}}" name="name" id="name">
+  <label for="descricao">Descrição do Evento</label>
+  <input type="text" placeholder="{{card.descricao}}" name="descricao" id="descricao">
+  <label for="url">URL do Evento</label>
+  <input type="text" placeholder="{{card.url}}" name="url" id="url">
   <button type="submit" class="btn">Confirmar</button>
 </div>
 </div>
