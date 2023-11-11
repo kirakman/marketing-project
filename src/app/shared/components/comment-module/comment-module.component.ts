@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { CardsInfoData, MOCK_CARDS_INFO } from 'src/app/Model/cards-model';
+import { CardsInfoData } from 'src/app/Model/cards-model';
 import { Comment } from '../../../Model/comment-model';
 
 
@@ -43,7 +43,7 @@ loadComments() {
 }
 
   card: any=  CardsInfoData;
-  cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
+
 
   constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: { card: CardsInfoData }, public dialogRef: MatDialogRef<CommentModuleComponent>) { }
 

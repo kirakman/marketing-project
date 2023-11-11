@@ -21,4 +21,9 @@ export class MarketingServiceService {
   getEvento(): Observable<EventoModel[]> {
     return this.httpClient.get<EventoModel[]>(this.API).pipe();
   }
+
+  deleteEvento(id: number): Observable<void> {
+    const url = `${this.API}/${id}`;
+    return this.httpClient.delete<void>(url);
+  }
 }
