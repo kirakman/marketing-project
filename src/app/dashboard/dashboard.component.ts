@@ -20,7 +20,7 @@ cardsInfo: CardsInfoData[] = MOCK_CARDS_INFO;
 eventos: EventoModel[] = [];
 listEvents$: Observable<CardsInfoData[]>;
 
-toggleFavoriteColor(card: CardsInfoData) {
+toggleFavoriteColor(card: EventoModel) {
   card.isFavorite = !card.isFavorite;
 }
 
