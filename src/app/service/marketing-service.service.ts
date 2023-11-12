@@ -1,4 +1,3 @@
-// Service
 import { EventoModel } from './../Model/evento-model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -27,8 +26,9 @@ export class MarketingServiceService {
     return this.httpClient.delete<void>(url);
   }
 
-  editEvento(id: number, evento: EventoModel): Observable<EventoModel> {
-    const url = `${this.API}/${id}`;
+  editEvento(evento: EventoModel): Observable<EventoModel> {
+    const url = `${this.API}/${evento.id}`; // Certifique-se de que o seu modelo de evento tenha uma propriedade "id"
     return this.httpClient.put<EventoModel>(url, evento);
   }
+
 }
