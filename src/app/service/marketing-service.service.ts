@@ -26,4 +26,9 @@ export class MarketingServiceService {
     const url = `${this.API}/${id}`;
     return this.httpClient.delete<void>(url);
   }
+
+  editEvento(id: number, evento: EventoModel): Observable<EventoModel> {
+    const url = `${this.API}/${id}`;
+    return this.httpClient.put<EventoModel>(url, evento);
+  }
 }
