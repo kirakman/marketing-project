@@ -1,8 +1,7 @@
 import { EventoModel } from './../Model/evento-model';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CardsInfoData } from '../Model/cards-model';
-import { delay, first, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +13,10 @@ export class MarketingServiceService {
   constructor(private httpClient: HttpClient) { }
 
   postEvento(evento: EventoModel): Observable<EventoModel> {
-    return this.httpClient.post<EventoModel>(this.API, evento);
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.httpClient.post<EventoModel>(this.API, evento, { headers });
   }
+
 
   getEvento(): Observable<EventoModel[]> {
     return this.httpClient.get<EventoModel[]>(this.API).pipe();
@@ -27,8 +28,13 @@ export class MarketingServiceService {
   }
 
   editEvento(evento: EventoModel): Observable<EventoModel> {
-    const url = `${this.API}/${evento.id}`; // Certifique-se de que o seu modelo de evento tenha uma propriedade "id"
+    const url = `${this.API}/${evento.id}`;
     return this.httpClient.put<EventoModel>(url, evento);
+  }
+
+  doisEditEvento(evento: EventoModel): Observable<EventoModel> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.httpClient.put<EventoModel>(this.API, evento, { headers });
   }
 
 }
