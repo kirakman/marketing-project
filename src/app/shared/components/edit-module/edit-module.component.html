@@ -3,7 +3,7 @@
  <div class="title">
   <h1>Editar Evento</h1>
  </div>
- <form class="event-info" (ngSubmit)="saveEvent()" #eventoForm="ngForm">
+ <form class="event-info" (ngSubmit)="editEvent()" #eventoForm="ngForm">
   <label for="img">URL da Imagem do Evento</label>
   <input type="text" placeholder="{{card.img}}" name="img" id="img" [(ngModel)]="eventoProp.img">
   <label for="name">Nome do Evento</label>
@@ -11,7 +11,7 @@
   <label for="descricao">Descrição do Evento</label>
   <input type="text" placeholder="{{card.descricao}}" name="descricao" id="descricao" [(ngModel)]="eventoProp.descricao">
   <label for="url">URL do Evento</label>
-  <input type="text" placeholder="{{card.url}}" name="url" id="url" [(ngModel)]="eventoProp.url">
-  <button type="submit" class="btn" type="submit">Confirmar</button>
+  <input type="text" placeholder="{{card.urlEvento}}" name="url" id="url" [(ngModel)]="eventoProp.urlEvento">
+  <button type="submit" class="btn" type="submit" (click)="editEvent()">Confirmar</button>
  </form>
 </div>

@@ -3,12 +3,11 @@
   width: 1100px;
   border: 2px solid rgb(14, 150, 9);
   box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-  display: flex;
-  overflow: hidden;
-  position: relative;
+  display: flex; /* Alteração aqui */
+  overflow: hidden; /* Adição aqui para esconder o overflow */
 }
 
-.icon-close {
+.icon-close{
   position: absolute;
   top: 0;
   right: 0;
@@ -23,6 +22,25 @@
   border-bottom-left-radius: 20px;
   cursor: pointer;
   z-index: 1;
+}
+
+.left-card {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid #162938;
+  gap: 15px;
+  overflow: hidden;
+}
+
+.left-card img{
+  width: 500px;
+  height: 300px;
+  border: 1px solid #162938;
 }
 
 .btn {
@@ -40,13 +58,6 @@
   transition: 1s;
 }
 
-
-.event-name{
-  border: #162938 2px solid;
-  border-radius: 20px;
-  padding: 15px;
-}
-
 .btn:hover {
   width: 150px;
   height: 45px;
@@ -61,67 +72,35 @@
   letter-spacing: 4px;
 }
 
-.sides {
-  display: flex;
-  height: 100%;
-}
-
-.left-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  border-right: 2px solid #162938;
-  gap: 15px;
-  overflow: hidden;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.left-card img {
-  width: 500px;
-  height: 300px;
-  border: 2px solid #162938;
-}
-
-.right-card {
-  flex: 1;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 30px;
-}
-
-.inside-comments {
-  text-align: center;
-  max-width: 90%;
-  overflow-wrap: break-word;
-  margin-top: 10px;
+.event-name{
+  border: #162938 2px solid;
+  border-radius: 20px;
+  padding: 15px;
 }
 
 h3{
   font-weight: 600;
 }
 
-.your{
-  padding-bottom: 5px;
+.sides{
+  display: flex;
 }
 
-.all {
-  gap: 5px;
-  overflow-wrap: break-word;
-  overflow-x: auto;
-  margin-bottom: 10px;
+/* ... Seu CSS anterior ... */
+
+.right-card {
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.unit {
-  border: 1px solid black;
-  padding: 5px;
-  border-radius: 25px;
-  margin-bottom: 5px;
+.inside-comments {
+  border: 1px solid #162938;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+  max-width: 90%; /* Defina o tamanho máximo desejado */
+  overflow-wrap: break-word; /* Adiciona a quebra de linha quando excede a largura */
 }
+

@@ -22,9 +22,9 @@ toggleFavoriteColor(card: EventoModel) {
   card.isFavorite = !card.isFavorite;
 }
 
-shareUrl(url: string) {
-  if (url) {
-    window.open(url, '_blank');
+shareUrl(card: any) {
+  if (card) {
+    window.open(card, '_blank');
   }
 }
 
@@ -36,11 +36,12 @@ onError(errorMsg: string){
   });
 }
 
-openDialogExclude(enterAnimationDuration: string, exitAnimationDuration: string): void {
-  this.dialog.open(ExcludeDialogComponent, {
+openDialogExclude(enterAnimationDuration: string, exitAnimationDuration: string, cardId: EventoModel): void {
+  const dialogRef = this.dialog.open(ExcludeDialogComponent, {
     width: '250px',
     enterAnimationDuration,
     exitAnimationDuration,
+    data: { cardId }
   });
 }
 

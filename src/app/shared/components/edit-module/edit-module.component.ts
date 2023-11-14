@@ -25,14 +25,18 @@ card: any = EventoModel;
   this.dialogRef.close();
 }
 
-saveEvent() {
+editEvent() {
   const evento: EventoModel = {
+    id: this.eventoProp.id,
     nome: this.eventoProp.nome,
     descricao: this.eventoProp.descricao,
     img: this.eventoProp.img,
-    url: this.eventoProp.url
+    urlEvento: this.eventoProp.urlEvento
   };
-  this.service.doisEditEvento(evento);
+  this.service.doisEditEvento(evento).subscribe((result) => {
+    console.log('Evento salvo:', result);
+  });
+  this.dialogRef.close();
 }
 
   ngOnInit() {

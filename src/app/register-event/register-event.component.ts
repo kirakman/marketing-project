@@ -21,7 +21,7 @@ export class RegisterEventComponent {
       nome: this.eventoProp.nome,
       descricao: this.eventoProp.descricao,
       img: this.eventoProp.img,
-      url: this.eventoProp.url
+      urlEvento: this.eventoProp.urlEvento
     };
     this.service.postEvento(evento).subscribe((result) => {
       console.log('Evento salvo:', result);

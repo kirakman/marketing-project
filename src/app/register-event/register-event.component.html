@@ -5,12 +5,12 @@
     <form class="form" (ngSubmit)="saveEvent()" #eventoForm="ngForm">
       <label for="nome">Nome do Evento</label>
       <input type="text" id="nome" name="nome" [(ngModel)]="eventoProp.nome">
-      <label for="descricao">Endereço do Evento</label>
+      <label for="descricao">Descrição do Evento</label>
       <input type="text" id="descricao" name="descricao" [(ngModel)]="eventoProp.descricao">
       <label for="img">URL da Imagem do Evento</label>
       <input type="text" id="img" name="img" [(ngModel)]="eventoProp.img">
       <label for="urlEvento">URL do Evento</label>
-      <input type="text" id="urlEvento" name="urlEvento" [(ngModel)]="eventoProp.url">
+      <input type="text" id="urlEvento" name="urlEvento" [(ngModel)]="eventoProp.urlEvento">
       <br>
       <button class="button-89" role="button" type="submit">Cadastrar Evento</button>
     </form>

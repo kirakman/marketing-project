@@ -13,7 +13,7 @@
     </mat-card-content>
     <div class="comment">
       <form #commentForm="ngForm" (ngSubmit)="addComment(); saveComments()">
-        <label for="comment">Seu Comentário:</label>
+        <label for="comment" class="your">Seu Comentário:</label>
         <textarea id="comment" name="comment" rows="4" cols="50" [(ngModel)]="newCommentText" required></textarea>
         <br><br>
         <input type="submit" value="Enviar" class="btn">
@@ -22,8 +22,8 @@
   </div>
   <div class="right-card">
     <div class="inside-comments">
-      <div *ngFor="let comment of comments">
-        <span>{{comment.text}}</span>
+      <div *ngFor="let comment of comments" class="all">
+        <div class="unit">{{comment.text}}</div>
       </div>
     </div>
   </div>
