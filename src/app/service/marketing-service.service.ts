@@ -17,24 +17,27 @@ export class MarketingServiceService {
     return this.httpClient.post<EventoModel>(this.API, evento, { headers });
   }
 
-
   getEvento(): Observable<EventoModel[]> {
     return this.httpClient.get<EventoModel[]>(this.API).pipe();
   }
 
-  deleteEvento(id: number): Observable<void> {
-    const url = `${this.API}/${id}`;
+  deleteEvento(card: EventoModel): Observable<void> {
+    const url = `${this.API}/${card._id}`;
     return this.httpClient.delete<void>(url);
   }
 
   editEvento(card: EventoModel): Observable<EventoModel> {
-    const url = `${this.API}/${card.id}`;
+    const url = `${this.API}/${card._id}`;
     return this.httpClient.put<EventoModel>(url, card);
   }
 
   doisEditEvento(evento: EventoModel): Observable<EventoModel> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.httpClient.put<EventoModel>(this.API, evento, { headers });
+  }
+
+  updateEvent(_id: number, evento: EventoModel) {
+    return this.httpClient.post(`/api/eventos/${_id}`, evento);
   }
 
 }

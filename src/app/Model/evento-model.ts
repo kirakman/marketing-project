@@ -1,10 +1,10 @@
 export class EventoModel{
 
-public id?: number;
+public _id?: number | undefined;
 public nome?:string;
 public descricao?:string;
 public img?:string;
-public urlEvento?:string;
+public url_Evento?:string;
 public isFavorite?:boolean;
 
 }

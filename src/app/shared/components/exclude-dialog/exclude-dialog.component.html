@@ -1,8 +1,11 @@
 <h1 mat-dialog-title class="title">Excluir evento?</h1>
 <div mat-dialog-content class="subtitle">
+  <h3>Nome: {{ data.card.nome }}</h3>
+  <h3>Descrição: {{ data.card.descricao }}</h3>
+  <br>
   Você tem certeza que deseja excluir esse evento?
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Não</button>
-  <button mat-button mat-dialog-close cdkFocusInitial class="yes-button" >Sim</button>
+  <button mat-button mat-dialog-close cdkFocusInitial class="yes-button" (click)="openDialogExclude(data.card)">Sim</button>
 </div>

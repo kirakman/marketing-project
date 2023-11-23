@@ -7,10 +7,10 @@
         <p class="card-text">{{ card.descricao }}</p>
         <div class="media">
           <span class="material-symbols-outlined" [ngClass]="{ red: card.isFavorite }" (click)="toggleFavoriteColor(card)">favorite</span>
-          <button (click)="shareUrl(card.urlEvento)"><span class="material-symbols-outlined">share</span></button>
+          <button (click)="shareUrl(card.url_Evento)"><span class="material-symbols-outlined">share</span></button>
           <button (click)="commentDialog(card)"><span class="material-symbols-outlined">comment</span></button>
           <button (click)="openDialogEdit(card)" class="edit-button"><span class="material-symbols-outlined">edit</span></button>
-          <button (click)="openDialogExclude('0ms', '0ms', card)"><span class="material-symbols-outlined">delete_forever</span></button>
+          <button (click)="openDialogExclude(card)"><span class="material-symbols-outlined">delete_forever</span></button>
         </div>
       </div>
     </div>

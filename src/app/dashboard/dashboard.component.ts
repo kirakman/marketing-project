@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CardsInfoData, MOCK_CARDS_INFO } from '../Model/cards-model';
 import { MarketingServiceService } from '../service/marketing-service.service';
-import { Observable, catchError, of } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { ErrorDialogComponent } from '../shared/components/error-dialog/error-dialog.component';
 import { ExcludeDialogComponent } from '../shared/components/exclude-dialog/exclude-dialog.component';
@@ -36,14 +34,16 @@ onError(errorMsg: string){
   });
 }
 
-openDialogExclude(enterAnimationDuration: string, exitAnimationDuration: string, cardId: EventoModel): void {
+openDialogExclude(card: EventoModel){
   const dialogRef = this.dialog.open(ExcludeDialogComponent, {
-    width: '250px',
-    enterAnimationDuration,
-    exitAnimationDuration,
-    data: { cardId }
+    data: { card },
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log(`Dialog result: ${result}`);
   });
 }
+
 
 openDialogEdit(card: EventoModel) {
   const dialogRef = this.dialog.open(EditModuleComponent, {
